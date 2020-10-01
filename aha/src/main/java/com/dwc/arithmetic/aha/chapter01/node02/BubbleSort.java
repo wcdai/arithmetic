@@ -21,7 +21,7 @@ public class BubbleSort {
     /**
      * 总结：
      *  【总时间复杂度】
-     *      O(N^2) N代表元素总个数
+     *      O(N^2) N代表元素总个数 实际为0(1/2(N^2-N))
      *  【冒泡排序基本思想】
      *      每次比较两个相邻的元素，如果他们的顺序错误就把他们交换
      *  【冒泡排序缺点】
@@ -54,7 +54,9 @@ public class BubbleSort {
     }
 
     private static void bubbleSort1() {
-        int[] arr = {12, 35, 99, 18, 76};
+//        int[] arr = {12, 35, 99, 18, 76};
+        int count = 0;
+         int[] arr = {10,9};
         //n次排序，只用跑n-1趟。外层循环控制趟数，内层将本趟最小数归位
         for (int i = 0; i < arr.length-1; i++) {
             //从最左边，比较相邻两数大小，将较小数变成右邻居，挨个比较。
@@ -67,10 +69,12 @@ public class BubbleSort {
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
                 }
+                count++;
             }
         }
 
         System.out.println("arr = " + Arrays.toString(arr));
+        System.out.println("count = " + count);
         System.out.println("总计(arr.length-1)=4趟，每趟比较次数依次为(arr.length-1-i)={4,3,2,1},总循环次数即(4+3+2+1)=10");
         System.out.println("【时间复杂度为】O((1+N-1)(N-1)/2)=O(1/2N(N-1))=O(1/2N^2)=O(N^2)");
     }
