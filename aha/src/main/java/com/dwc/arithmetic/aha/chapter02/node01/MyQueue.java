@@ -17,7 +17,7 @@ package com.dwc.arithmetic.aha.chapter02.node01;
 public class MyQueue {
     public static void main(String[] args) {
 
-//        queue01();
+        queue01();
 
     }
 
