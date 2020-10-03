@@ -1,6 +1,5 @@
-package com.dwc.arithmetic.aha.chapter04.node01;
+package com.dwc.arithmetic.aha.chapter04.node02;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -8,7 +7,7 @@ import java.util.Scanner;
  * @date: 13:48 2020/10/3
  * @description: 解救小哈
  * @question:
- *
+ * 从迷宫中救出小哈
  */
 public class Labyrinth {
 
